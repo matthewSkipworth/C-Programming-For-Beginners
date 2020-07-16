@@ -29,7 +29,7 @@ int main(void)
     yearly_avg_rain(monthly_rain_avg_all_ptr, year_total_rain_ptr);
 
     //find the average rainfall per month.
-    
+    average_rain_per_month(monthly_rain_avg_all_ptr);
     // monthly_avg_rain(monthly_rain_avg_all_ptr, )
 
     return 0;
