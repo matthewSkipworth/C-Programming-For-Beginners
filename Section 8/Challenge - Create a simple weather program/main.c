@@ -11,8 +11,6 @@ int main(void)
     year_avg_ptr = &yearly_avg;
     month_avg_ptr = &monthly_avg;
 
-    printf("\nvalue of year_avg_ptr: %lf",*year_total_rain_ptr[0]);
-
     double monthly_rain_averages[3][12] = 
     {
         {187,168.1,80,67.5,99.4,54.6,64.5,138.6,22.8,157.7,123.4,132},
