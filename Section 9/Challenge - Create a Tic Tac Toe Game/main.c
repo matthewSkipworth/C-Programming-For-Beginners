@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    printf("-- TIC-TAC-TOE --");
+    printf("\n-- TIC-TAC-TOE --");
 
     char tiles[] = {' ',' ',' ',
                     ' ',' ',' ',
