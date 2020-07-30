@@ -7,9 +7,9 @@ int main(void)
 
     char (*boardptr)[];
 
-    char tiles[] = {' ',' ',' ',
-                    ' ',' ',' ',
-                    ' ',' ',' '};
+    char tiles[] = {'1','2','3',
+                    '4','5','6',
+                    '7','8','9'};
 
     boardptr = &tiles;
 
