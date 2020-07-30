@@ -5,21 +5,26 @@ int main(void)
 {
     printf("-- TIC-TAC-TOE --");
 
+    char (*boardptr)[];
+
     char tiles[] = {' ',' ',' ',
                     ' ',' ',' ',
                     ' ',' ',' '};
 
+    boardptr = &tiles;
+
     char currentPlayer = 1;
-
-    printf("\ncurrentPlayer = %d", currentPlayer);
-    currentPlayer ^= 1;
-    printf("\ncurrentPlayer = %d", currentPlayer);
-    currentPlayer ^= 1;
-    printf("\ncurrentPlayer = %d", currentPlayer);
-
-    // boardStatus
-    // drawBoard
-    // playerMove(tiles);
+    char gameOver = 0;
+    
+    drawBoard(tiles);
+    
+    while(!gameOver)
+    {
+        playerMove(boardptr, 'X');
+        drawBoard(tiles);
+        //checkBoardStatus(gameOver);
+        //changePlayers();
+    }
 
 
     printf("\n\n");

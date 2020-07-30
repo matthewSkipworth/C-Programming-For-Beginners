@@ -1,14 +1,50 @@
 #include "../include/gameBoard.h"
 
-void playerMove(char gameBoard[], char player)
+
+    // boardStatus
+    // drawBoard
+    // playerMove(tiles);
+    // switchPlayers
+
+void playerMove(char (*gameBoard)[], char player)
 {
+    
     int space;
-    printf("\nSelect a tile.");
+    do
+    {
+        printf("\nSelect a tile.");
 
-    scanf("%d", &space);
+        scanf("%d", &space);
+    } while(inputBoundsChecker(space));
 
-    printf("%d", space);
 
-    gameBoard[space-1] = player;
+    (*gameBoard)[space-1] = player;
 
+}
+
+void drawBoard(char gameBoard[])
+{
+    system("clear");
+    printf
+    (
+   "\n     |     |       \
+   \n  %c  |  %c  |  %c  \
+    \n_____|_____|_____  \
+    \n     |     |       \
+   \n  %c  |  %c  |  %c  \
+    \n_____|_____|_____  \
+    \n     |     |       \
+   \n  %c  |  %c  |  %c  \
+    \n     |     |      ", 
+     gameBoard[6],gameBoard[7], gameBoard[8],\
+     gameBoard[3],gameBoard[4], gameBoard[5],\
+     gameBoard[0],gameBoard[1], gameBoard[2]
+     );
+}
+
+int inputBoundsChecker(int input)
+{
+    if(input > 9 || input < 1)
+        return 1;
+    return 0;
 }
