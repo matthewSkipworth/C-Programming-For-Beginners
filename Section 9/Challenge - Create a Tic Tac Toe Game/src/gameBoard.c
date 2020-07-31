@@ -48,3 +48,8 @@ int inputBoundsChecker(int input)
         return 1;
     return 0;
 }
+
+void switchPlayers(char * currentPlayer_ptr)
+{
+    (*currentPlayer_ptr) ^= 1;
+}

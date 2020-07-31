@@ -5,6 +5,8 @@ int main(void)
 {
     printf("-- TIC-TAC-TOE --");
 
+    char gamePeice[] = {'X', 'O'};
+
     char (*boardptr)[];
 
     char tiles[] = {' ',' ',' ',
@@ -13,17 +15,18 @@ int main(void)
 
     boardptr = &tiles;
 
-    char currentPlayer = 1;
+    char currentPlayer = 1, *currentplayer_ptr;
+    currentplayer_ptr = &currentPlayer;
     char gameOver = 0;
     
     drawBoard(tiles);
     
     while(!gameOver)
     {
-        playerMove(boardptr, 'X');
+        playerMove(boardptr, gamePeice[currentPlayer]);
         drawBoard(tiles);
         //checkBoardStatus(gameOver);
-        //changePlayers();
+        switchPlayers(&currentPlayer);
     }
 
 

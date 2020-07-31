@@ -10,7 +10,7 @@ void drawBoard(char []);
 
 // TODO
 // boardStatus
-// switchPlayers
+void switchPlayers(char *);
 // inputBoundsChecker
 int inputBoundsChecker(int);
 
