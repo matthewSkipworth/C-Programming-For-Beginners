@@ -3,15 +3,15 @@
 
 int main(void)
 {
-    printf("-- TIC-TAC-TOE --");
+    printf("\n-- TIC-TAC-TOE --");
 
     char gamePeice[] = {'X', 'O'};
 
     char (*boardptr)[];
 
-    char tiles[] = {' ',' ',' ',
-                    ' ',' ',' ',
-                    ' ',' ',' '};
+    char tiles[] = {'1','2','3',
+                    '4','5','6',
+                    '7','8','9'};
 
     boardptr = &tiles;
 
