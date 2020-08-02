@@ -54,6 +54,11 @@ void drawBoard(char gameBoard[])
      );
 }
 
+/**
+ * checks for and discards invalid input.
+ * Anything outside of 1-9 and 'q' is invalid input. 
+ */
+
 int inputBoundsChecker(int input)
 {
     if(input > 9 || input < 1)
@@ -62,6 +67,10 @@ int inputBoundsChecker(int input)
         exit(0);
     return 0;
 }
+
+/**
+ * Toggles between players.
+ */
 
 void switchPlayers(char * currentPlayer_ptr)
 {

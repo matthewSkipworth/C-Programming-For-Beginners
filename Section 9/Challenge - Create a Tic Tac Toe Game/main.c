@@ -1,4 +1,6 @@
+#include <stdbool.h>
 #include <stdio.h>
+
 #include "include/gameBoard.h"
 
 int main(void)
@@ -13,10 +15,15 @@ int main(void)
                     '4','5','6',
                     '7','8','9'};
 
+    bool isTaken[] = {0,0,0,
+                      0,0,0,
+                      0,0,0};
+
     boardptr = &tiles;
 
     char currentPlayer = 1, *currentplayer_ptr;
     currentplayer_ptr = &currentPlayer;
+    
     char gameOver = 0;
     
     drawBoard(tiles);
