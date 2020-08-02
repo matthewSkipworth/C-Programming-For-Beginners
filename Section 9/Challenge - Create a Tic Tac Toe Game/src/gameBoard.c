@@ -9,12 +9,18 @@
 void playerMove(char (*gameBoard)[], char player)
 {
     
-    int space;
+    char space;
     do
     {
         printf("\nSelect a tile.");
 
         scanf("%d", &space);
+        while(getchar() != '\n');
+        
+        if ((char)space == 'q')
+            exit(0);
+            
+        
     } while(inputBoundsChecker(space));
 
 
@@ -46,6 +52,8 @@ int inputBoundsChecker(int input)
 {
     if(input > 9 || input < 1)
         return 1;
+    else if (input == 'q')
+        exit(0);
     return 0;
 }
 
