@@ -1,5 +1,6 @@
 #include <stdbool.h>
 #include <stdio.h>
+#include <string.h>
 
 #include "include/gameBoard.h"
 
@@ -9,17 +10,24 @@ int main(void)
 
     char gamePeice[] = {'X', 'O'};
 
-    char (*boardptr)[];
+    char (*board_ptr)[];
+    bool (*isTaken_ptr)[];
 
     char tiles[] = {'1','2','3',
                     '4','5','6',
                     '7','8','9'};
 
-    bool isTaken[] = {0,0,0,
-                      0,0,0,
-                      0,0,0};
+    bool isTaken[9];
 
-    boardptr = &tiles;
+    memset(isTaken, false, sizeof(isTaken));
+    board_ptr = &tiles;
+    isTaken_ptr = &isTaken;
+
+    // if(!isTaken[4])
+    // {
+    //     printf("isTaken array filled with false hope.");
+    // }
+    // getchar();
 
     char currentPlayer = 1, *currentplayer_ptr;
     currentplayer_ptr = &currentPlayer;
@@ -30,7 +38,7 @@ int main(void)
     
     while(!gameOver)
     {
-        playerMove(boardptr, gamePeice[currentPlayer]);
+        playerMove(board_ptr, isTaken_ptr, gamePeice[currentPlayer]);
         drawBoard(tiles);
         //checkBoardStatus(gameOver);
         switchPlayers(&currentPlayer);

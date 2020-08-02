@@ -6,7 +6,7 @@
     // playerMove(tiles);
     // switchPlayers
 
-void playerMove(char (*gameBoard)[], char player)
+void playerMove(char (*gameBoard)[], bool (*isTaken_ptr)[],  char player)
 {
     
     char space;
@@ -28,9 +28,18 @@ void playerMove(char (*gameBoard)[], char player)
         }
         
         
-    } while(inputBoundsChecker(space - ASCII_DESIGNATION)); // subtract 48 to convert char to int.
-                                             // (the ASCII for 1 is 49)
+    } 
+    while \
+    ( \
+        inputBoundsChecker(space - ASCII_DESIGNATION) \
+        && (*isTaken_ptr)[ (space) - (ASCII_DESIGNATION + 1) ] == false \
+    ); 
+    // subtract 48 to convert char to int.
+    // (the ASCII for 1 is 49)
+    
+    (*isTaken_ptr)[(space)-(ASCII_DESIGNATION + 1) ] = true;
     (*gameBoard)[(space)-(ASCII_DESIGNATION + 1) ] = player;
+
 
 }
 
