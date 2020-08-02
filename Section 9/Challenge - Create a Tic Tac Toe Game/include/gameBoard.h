@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define ASCII_DESIGNATION 48
 
 void playerMove(char (*) [], char);
 void drawBoard(char []);

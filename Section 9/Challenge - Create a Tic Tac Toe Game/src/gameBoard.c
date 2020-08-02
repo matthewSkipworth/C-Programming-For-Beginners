@@ -14,17 +14,23 @@ void playerMove(char (*gameBoard)[], char player)
     {
         printf("\nSelect a tile.");
 
-        scanf("%d", &space);
+        scanf("%c", &space);
         while(getchar() != '\n');
         
-        if ((char)space == 'q')
-            exit(0);
+        if (space == 'q')
+        {
             
+            exit(0);
+        }
+        else
+        {
+            continue;
+        }
         
-    } while(inputBoundsChecker(space));
-
-
-    (*gameBoard)[space-1] = player;
+        
+    } while(inputBoundsChecker(space - ASCII_DESIGNATION)); // subtract 48 to convert char to int.
+                                             // (the ASCII for 1 is 49)
+    (*gameBoard)[(space)-(ASCII_DESIGNATION + 1) ] = player;
 
 }
 
