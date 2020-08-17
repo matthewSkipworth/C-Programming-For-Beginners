@@ -3,9 +3,12 @@
 
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-// bool isTieGame();
+#define BOARDSIZE 9
 
+
+bool isTieGame(bool (*) []);
 
 bool gameIsWon(char (*) []);
 

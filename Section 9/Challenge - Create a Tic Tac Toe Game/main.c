@@ -48,10 +48,11 @@ int main(void)
             drawBoard(tiles);
             //checkBoardStatus(gameOver);
             switchPlayers(&currentPlayer);
-            if(gameIsWon(board_ptr))
+            if(gameIsWon(board_ptr) || isTieGame(isTaken_ptr))
             {
                 gameOver = true;
             }
+       
         }
 
 
