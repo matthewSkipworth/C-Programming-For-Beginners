@@ -59,7 +59,7 @@ int main(void)
         printf("\n\n");
         return 0;
     }
-    else
+    else // use this to test functions.
     {
         int i = playerInput();
         
