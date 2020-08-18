@@ -11,7 +11,7 @@ int main(void)
     char gamePeice[] = {'X', 'O'};
 
     char (*board_ptr)[];
-    bool (*isTaken_ptr)[];
+    int (*isTaken_ptr)[];
 
     char tiles[] = {'1','2','3',
                     '4','5','6',

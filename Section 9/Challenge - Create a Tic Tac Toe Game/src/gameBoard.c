@@ -6,9 +6,11 @@
     // playerMove(tiles);
     // switchPlayers
 
-void playerMove(char (*gameBoard)[], bool (*isTaken_ptr)[],  char player)
+void playerMove(char (*gameBoard)[], int (*isTaken_ptr)[],  char player)
 {
     
+    // NEEDS REFACTORING
+
     char space;
     do
     {
@@ -16,29 +18,54 @@ void playerMove(char (*gameBoard)[], bool (*isTaken_ptr)[],  char player)
 
         scanf("%c", &space);
         while(getchar() != '\n');
-        
-        if (space == 'q')
+
+        switch (space)
         {
+            case '1':
+                (*gameBoard)[0] = player;
+                break;
+            case '2':
+                (*gameBoard)[1] = player;
+                break;
+            case '3':
+                (*gameBoard)[2] = player;
+                break;
+            case '4':
+                (*gameBoard)[3] = player;
+                break;
+            case '5':
+                (*gameBoard)[4] = player;
+                break;
+            case '6':
+                (*gameBoard)[5] = player;
+                break;
+            case '7':
+                (*gameBoard)[6] = player;
+                break;
+            case '8':
+                (*gameBoard)[7] = player;
+                break;
+            case '9':
+                (*gameBoard)[8] = player;
+                break;
+            case 'q':
+                exit(0);
+
+            default:
+                printf("default");
+        }
             
-            exit(0);
-        }
-        else
-        {
-            continue;
-        }
-        
-        
     } 
     while \
     ( \
-        inputBoundsChecker(space - ASCII_DESIGNATION) \
-        && (*isTaken_ptr)[ (space) - (ASCII_DESIGNATION + 1) ] == false \
+        ( inputBoundsChecker(space - ASCII_DESIGNATION) ) \
+        && (! (*isTaken_ptr)[ (space) - (ASCII_DESIGNATION + 1) ] ) \
     ); 
     // subtract 48 to convert char to int.
     // (the ASCII for 1 is 49)
     
-    (*isTaken_ptr)[(space)-(ASCII_DESIGNATION + 1) ] = true;
-    (*gameBoard)[(space)-(ASCII_DESIGNATION + 1) ] = player;
+    // (*isTaken_ptr)[(space)-(ASCII_DESIGNATION + 1) ] = 1;
+    // (*gameBoard)[(space)-(ASCII_DESIGNATION + 1) ] = player;
 
 
 }
