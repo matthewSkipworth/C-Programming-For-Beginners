@@ -4,6 +4,7 @@
 // #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 #define ASCII_DESIGNATION 48
 
@@ -16,6 +17,6 @@ void switchPlayers(char *);
 // inputBoundsChecker
 int inputBoundsChecker(int);
 
-
+int playerInput(void);
 
 #endif
