@@ -1,7 +1,7 @@
 $(shell mkdir build)
 
-strFunc: build/main.o build/myString.o
-	gcc build/main.o build/myString.o -o strFunc
+strFunc: build/main.o build/myString.o build/menu.o
+	gcc build/main.o build/myString.o build/menu.o -o strFunc
 
 build/main.o: main.c
 	gcc -c main.c -o build/main.o

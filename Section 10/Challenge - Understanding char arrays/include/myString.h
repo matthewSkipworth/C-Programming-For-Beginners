@@ -7,5 +7,6 @@
 int myStrlen(char (*)[]);
 void myStrcat(char(*)[], char(*)[], char(*)[]);
 bool myStrcmp(char(*)[], char(*)[]);
+void getInputString(char (*)[]);
 
 #endif

@@ -1,8 +1,13 @@
 #include "include/myString.h"
+#include "include/menu.h"
 
+void optionSelect(char (*)[], char(*)[]);
 
 int main(void)
 {
+    
+    drawMenu();
+
     char (*buff_ptr)[], (*cat_ptr)[], (*catstr_ptr)[];
 
     char buffer[128], catstr[256];
@@ -35,7 +40,7 @@ int main(void)
     }
     else
     {
-        printf("Not a match.");
+        printf("\nNot a match.");
     }
     
 
@@ -43,3 +48,20 @@ int main(void)
     return 0;
 }
 
+void optionSelect(char (*myString1)[], char (*myString2)[])
+{
+    char input_buffer[8];
+
+    fgets(input_buffer, 8, stdin);
+
+    switch(input_buffer[0])
+    {
+        case 1: 
+        {
+            int len = myStrlen(myString1);
+            printf("\nThe length of the string is %d", len);
+        } 
+        
+    }
+
+}
