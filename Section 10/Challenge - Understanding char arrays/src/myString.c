@@ -1,6 +1,13 @@
 #include "../include/myString.h"
 
 
+void getInputString(char (*myString)[])
+{
+    printf("\nEnter a string: ");
+    
+    fgets(myString)
+}
+
 int myStrlen(char (*myString)[])
 {
     int i = 0;
