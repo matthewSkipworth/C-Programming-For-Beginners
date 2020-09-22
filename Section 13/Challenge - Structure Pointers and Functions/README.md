@@ -14,4 +14,4 @@ create a function named print item that takes as a parameter a structure pointer
 
 the main function should declare an item and a pointer to the item
     you need to allocate memory for the itemName pointer
-    the item pointer shoul be passed into both the read and print item functions
+    the item pointer should be passed into both the read and print item functions
